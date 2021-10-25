@@ -1,0 +1,182 @@
+<style>
+    :root {
+        --body: #f45a3b;
+        --black: #000000;
+        --cover: #d8d8d8;
+        --accent: #ff0000;
+        --antenna: #999999;
+        --thing: #666666;
+        --basement: #222222;
+        --background: #ffffff;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        background-image: linear-gradient(45deg, #f45a3b, #ffffff);
+    }
+
+    body {
+        margin: 0;
+    }
+
+    .picture {
+        width: 1000px;
+        height: 1000px;
+        padding-block-start: 105px;
+        padding-block-end: 115px;
+        padding-inline-start: 245px;
+        padding-inline-end: 215px;
+        background-color: var(--background);
+    }
+
+    .cart {
+        width: 540px;
+        height: 780px;
+    }
+
+    .antenna {
+        position: relative;
+        padding-inline-start: 75px;
+    }
+
+    .antenna__flag {
+        position: absolute;
+        top: 5px;
+        left: 70px;
+        width: 0;
+        height: 0;
+        border-inline-end: 65px solid var(--accent);
+        border-block: 20px solid transparent;
+    }
+
+    .antenna__stick {
+        width: 5px;
+        height: 320px;
+        margin-inline-start: 60px;
+        background-color: var(--antenna);
+    }
+
+    .antenna__thing-1 {
+        width: 55px;
+        height: 10px;
+        margin-inline-start: 35px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        background-color: var(--black);
+    }
+
+    .antenna__thing-2 {
+        width: 55px;
+        height: 30px;
+        margin-inline-start: 35px;
+        background-color: var(--thing);
+    }
+
+    .antenna__thing-3 {
+        width: 95px;
+        height: 0;
+        border-block-end: 55px solid var(--black);
+	    border-left: 20px solid transparent;
+    }
+
+    .cover__main {
+        width: 530px;
+        height: 50px;
+        margin: 0 auto;
+        border-radius: 60px 250px 0 0 / 50px 50px 0 0;
+        background-color: var(--cover);
+    }
+
+    .cover__border {
+        width: 540px;
+        height: 15px;
+        border-radius: 10px;
+        background-color: var(--accent);
+    }
+
+    .cart__body {
+        width: 520px;
+        height: 130px;
+        margin: 0 auto;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        background-color: var(--body);
+    }
+
+    .cart__basement {
+        height: 170px;
+        padding-inline: 25px;
+    }
+
+    .basement__top {
+        width: 490px;
+        height: 0;
+        border-block-end: 10px solid var(--basement);
+        border-inline: 10px solid transparent;
+    }
+
+    .basement__main {
+        width: 490px;
+        height: 30px;
+        background-color: var(--basement);
+    }
+
+    .basement__bottom {
+        width: 490px;
+        height: 0;
+        border-block-start: 70px solid var(--basement);
+        border-inline: 70px solid transparent;
+    }
+
+    .cart__wheels {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        position: relative;
+        top: -70px;
+        width: 490px;
+        padding-inline-start: 10px;
+    }
+
+    .wheel {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        background-color: var(--black);
+    }
+
+</style>
+<body>
+    <div class="picture">
+        <div class="cart">
+            <div class="cart__cover">
+                <div class="antenna cart__antenna">
+                    <div class="antenna__flag"></div>
+                    <div class="antenna__stick"></div>
+                    <div class="antenna__basement">
+                        <div class="antenna__thing-1"></div>
+                        <div class="antenna__thing-2"></div>
+                        <div class="antenna__thing-3"></div>
+                    </div>
+                </div>
+                <div class="cover__main"></div>
+                <div class="cover__border"></div>
+            </div>
+            <div class="cart__body">
+            </div>
+            <div class="cart__basement">
+                <div class="basement__top"></div>
+                <div class="basement__main"></div>
+                <div class="basement__bottom"></div>
+                <div class="cart__wheels">
+                    <div class="wheel"></div>
+                    <div class="wheel"></div>
+                    <div class="wheel"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
