@@ -12,10 +12,10 @@ rl.on('line', (line) => {
     const result = [];
     
     for (let i = 1; i < lines.length; i += 2) {
-        // const [N, D, C, M] = lines[i].split(' ').map(item => parseInt(item, 10));
-        // const S = lines[i + 1];
+        const [N, M] = lines[i].split(' ').map(item => parseInt(item, 10));
+        const C = lines[i + 1].split(' ').map(item => parseInt(item, 10));
         
-        testResults.push(solution());
+        testResults.push(solution(C, M));
     }
 
     for (let i = 0; i < testResults.length; i++) {
@@ -25,6 +25,8 @@ rl.on('line', (line) => {
     process.stdout.write(result.join('\n'));
 });
 
-function solution() {
+function solution(candies, kidsAmount) {
+    const totalCandies = candies.reduce((total, candyAmount) => total += candyAmount);
 
+    return totalCandies % kidsAmount;
 }
